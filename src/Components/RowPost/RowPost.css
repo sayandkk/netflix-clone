@@ -1,0 +1,75 @@
+.row {
+    padding-left: 40px;
+    color: #ffffff;
+    background-color: black;
+    margin-top: -25px;
+    padding-top: 10px;
+}
+
+.posters {
+    display: flex;
+    padding-top: 58px;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.posters::-webkit-scrollbar {
+    display: none;
+}
+
+.poster:hover {
+    transform: scale(1.05);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.poster {
+    border-radius: 35px;
+    transition: transform .3s;
+    max-height: 250px;
+    margin-right: 10px;
+
+    padding-right: 10px;
+
+}
+
+
+
+
+
+
+/* Media Queries for rowpost.css */
+
+/* For screens wider than 768px */
+@media (min-width: 768px) {
+    .row {
+        padding-left: 40px;
+        margin-top: -25px;
+    }
+
+    .posters {
+        padding-top: 58px;
+    }
+
+    .poster {
+        max-height: 250px;
+    }
+}
+
+/* For screens narrower than 768px */
+@media (max-width: 767px) {
+    .row {
+        padding-left: 20px;
+        margin-top: 0;
+    }
+
+    .posters {
+        padding-top: 30px;
+        overflow-x: scroll;
+    }
+
+    .poster {
+        max-height: 150px;
+        margin-right: 5px;
+    }
+}
